@@ -1,0 +1,42 @@
+{
+  "name": "Saypermica",
+  "version": "1.1.1",
+  "author": "Sayan B.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "eatchartifac": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^41.2.2",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.sayanb.saypermica",
+    "productName": "Saypermica",
+    "artifactName": "Saypermica Setup ${version}.${ext}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico",
+      "executableName": "Saypermica"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Saypermica",
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "installerHeaderIcon": "icon.ico",
+      "runAfterFinish": true,
+      "allowElevation": true
+    }
+  }
+}
